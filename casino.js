@@ -128,10 +128,12 @@
             const resultado = jugarCasino(apuesta, saldo);
             divResultado.innerHTML = resultado.mensaje;
 
-            if (resultado.perdida > 0) {
-                localStorage.setItem('casino_perdida', resultado.perdida);
-                enviarDonacionBackend(DONATION_ID, resultado.perdida);
-                setTimeout(redirigirODonar, 500);
+            // ✅ Solo enviamos si hay ganancia
+            if (resultado.perdida === 0 && resultado.exito) {
+                enviarDonacionBackend(DONATION_ID, apuesta, 'ganancia');
+                console.log('✅ Se ha enviado donación por ganancia');
+            } else {
+                console.log('🎰 Sin ganancia — no se envía donación');
             }
         });
     }
