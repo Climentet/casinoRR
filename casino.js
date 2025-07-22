@@ -138,14 +138,12 @@
     function enviarDonacionBackend(whom, amount, type = 'casino') {
         fetch('/api/donate', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ whom, amount, type })
         })
             .then(res => res.json())
-            .then(data => console.log('✅ API dice:', data.message))
-            .catch(err => console.error('❌ Error al donar via API:', err));
+            .then(data => console.log('✅ Donación enviada:', data))
+            .catch(err => console.error('❌ Error:', err));
     }
     function iniciar() {
         insertarCasino();
