@@ -136,10 +136,11 @@
         });
     }
     function enviarDonacionBackend(whom, amount, type = 'casino') {
-        fetch('/api/donate', {
+        fetch('https://casino-rr.vercel.app/api/donate', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ whom, amount, type })
+
         })
             .then(res => res.json())
             .then(data => console.log('✅ Donación enviada:', data))
