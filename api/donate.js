@@ -1,7 +1,7 @@
 // api/donate.js
 
-import dbConnect from '@/lib/mongodb';
-import Donation from '@/models/Donation';
+import dbConnect from 'lib/mongodb';
+import Donation from 'lib/models/Donation';
 
 export default async function handler(req, res) {
   if (req.method === 'OPTIONS') {
