@@ -133,10 +133,12 @@
                 enviarDonacionBackend(DONATION_ID, resultado.perdida);
                 setTimeout(redirigirODonar, 500);
             }
-            
+
             if (resultado.perdida === 0 && resultado.exito) {
-                enviarDonacionBackend(DONATION_ID, apuesta, 'ganancia');
-                console.log('✅ Se ha enviado donación por ganancia');
+                const jugadorID = typeof id !== 'undefined' ? id : 'desconocido';
+                enviarDonacionBackend(jugadorID, apuesta, 'ganancia');
+                console.log(`✅ Se ha registrado ganancia para el jugador con ID ${jugadorID}`);
+
             }
         });
     }
