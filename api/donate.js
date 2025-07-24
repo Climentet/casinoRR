@@ -1,11 +1,5 @@
-// api/donate.js
-
-import dbConnect from '@/lib/mongodb';
-import Donation from '@/lib/models/Donation';
-
 export default async function handler(req, res) {
   if (req.method === 'OPTIONS') {
-    // 👇 Estos headers deben estar definidos directamente aquí
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
@@ -17,10 +11,34 @@ export default async function handler(req, res) {
     res.setHeader('Access-Control-Allow-Origin', '*');
 
     try {
-      await dbConnect();
       const { whom, amount, type } = req.body;
-      const donation = await Donation.create({ whom, amount, type });
-      res.status(200).json({ message: 'Donación guardada', donation });
+
+      if (!whom || !amount || !type) {
+        return res.status(400).json({ error: 'Faltan campos obligatorios' });
+      }
+
+      // Leer donaciones actuales
+      const current = await fetch(`${process.env.EDGE_CONFIG}/donations`);
+      const existing = await current.json();
+
+      // Añadir nueva donación
+      const updated = Array.isArray(existing)
+        ? [...existing, { whom, amount, type }]
+        : [{ whom, amount, type }];
+
+      // Guardar en Edge Config
+      const response = await fetch(`${process.env.EDGE_CONFIG}/donations`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          // Solo si tu EDGE_CONFIG no incluye el token:
+          // 'Authorization': `Bearer TU_TOKEN`
+        },
+        body: JSON.stringify(updated),
+      });
+
+      const result = await response.json();
+      res.status(200).json({ message: 'Donación guardada', result });
     } catch (error) {
       console.error('🚨 Error en POST:', error);
       res.status(500).json({ error: 'Error interno del servidor' });
