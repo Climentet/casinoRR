@@ -1,15 +1,13 @@
 export default async function handler(req, res) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+
   if (req.method === 'OPTIONS') {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-    res.status(200).end();
-    return;
+    return res.status(200).end();
   }
 
   if (req.method === 'POST') {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-
     try {
       const { whom, amount, type } = req.body;
 
@@ -17,45 +15,58 @@ export default async function handler(req, res) {
         return res.status(400).json({ error: 'Faltan campos obligatorios' });
       }
 
-      // Leer donaciones actuales
       const current = await fetch(`${process.env.EDGE_CONFIG}/donations`);
+      const raw = await current.text();
       let existing = [];
 
       try {
-        const raw = await current.text();
         existing = raw ? JSON.parse(raw) : [];
       } catch (err) {
-        console.warn('⚠️ Respuesta de lectura no era JSON válido:', err);
-        existing = [];
+        console.warn('⚠️ JSON inválido, creando nuevo array');
       }
 
       const updated = Array.isArray(existing)
         ? [...existing, { whom, amount, type }]
         : [{ whom, amount, type }];
 
-      // Guardar donaciones actualizadas
       const putResponse = await fetch(`${process.env.EDGE_CONFIG}/donations`, {
         method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-          // 'Authorization': `Bearer TU_TOKEN` // solo si tu EDGE_CONFIG no incluye el token
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updated),
       });
 
       if (!putResponse.ok) {
         const errorText = await putResponse.text();
-        console.error('❌ Error al guardar en Edge Config:', errorText);
-        return res.status(500).json({ error: 'Error al guardar donaciones' });
+        console.error('❌ Error al guardar:', errorText);
+        return res.status(500).json({ error: 'Error al guardar donación' });
       }
 
-      res.status(200).json({ message: 'Donación guardada', donation: { whom, amount, type } });
+      return res.status(200).json({ message: 'Donación guardada', donation: { whom, amount, type } });
     } catch (error) {
       console.error('🚨 Error en POST:', error);
-      res.status(500).json({ error: 'Error interno del servidor' });
+      return res.status(500).json({ error: 'Error interno' });
     }
-  } else {
-    res.setHeader('Allow', ['POST', 'OPTIONS']);
-    res.status(405).end(`Method ${req.method} Not Allowed`);
   }
+
+  if (req.method === 'GET') {
+    try {
+      const response = await fetch(`${process.env.EDGE_CONFIG}/donations`);
+      const raw = await response.text();
+
+      let donations = [];
+      try {
+        donations = raw ? JSON.parse(raw) : [];
+      } catch (err) {
+        console.warn('⚠️ Falló al parsear donaciones:', err);
+      }
+
+      return res.status(200).json({ donations });
+    } catch (error) {
+      console.error('🚨 Error en GET:', error);
+      return res.status(500).json({ error: 'Error al recuperar donaciones' });
+    }
+  }
+
+  res.setHeader('Allow', ['GET', 'POST', 'OPTIONS']);
+  res.status(405).end(`Method ${req.method} Not Allowed`);
 }
