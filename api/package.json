@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@vercel/edge-config": "^1.4.0",
     "mongoose": "^8.16.4"
   }
 }
