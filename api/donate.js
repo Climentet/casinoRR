@@ -19,26 +19,37 @@ export default async function handler(req, res) {
 
       // Leer donaciones actuales
       const current = await fetch(`${process.env.EDGE_CONFIG}/donations`);
-      const existing = await current.json();
+      let existing = [];
 
-      // Añadir nueva donación
+      try {
+        const raw = await current.text();
+        existing = raw ? JSON.parse(raw) : [];
+      } catch (err) {
+        console.warn('⚠️ Respuesta de lectura no era JSON válido:', err);
+        existing = [];
+      }
+
       const updated = Array.isArray(existing)
         ? [...existing, { whom, amount, type }]
         : [{ whom, amount, type }];
 
-      // Guardar en Edge Config
-      const response = await fetch(`${process.env.EDGE_CONFIG}/donations`, {
+      // Guardar donaciones actualizadas
+      const putResponse = await fetch(`${process.env.EDGE_CONFIG}/donations`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
-          // Solo si tu EDGE_CONFIG no incluye el token:
-          // 'Authorization': `Bearer TU_TOKEN`
+          // 'Authorization': `Bearer TU_TOKEN` // solo si tu EDGE_CONFIG no incluye el token
         },
         body: JSON.stringify(updated),
       });
 
-      const result = await response.json();
-      res.status(200).json({ message: 'Donación guardada', result });
+      if (!putResponse.ok) {
+        const errorText = await putResponse.text();
+        console.error('❌ Error al guardar en Edge Config:', errorText);
+        return res.status(500).json({ error: 'Error al guardar donaciones' });
+      }
+
+      res.status(200).json({ message: 'Donación guardada', donation: { whom, amount, type } });
     } catch (error) {
       console.error('🚨 Error en POST:', error);
       res.status(500).json({ error: 'Error interno del servidor' });
